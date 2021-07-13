@@ -1,0 +1,28 @@
+.searchpage_container {
+    display: flex;
+    flex-direction: column;
+    padding: 25px 100px;
+}
+
+.searchpage_container > p {
+    padding-bottom: 25px;
+}
+
+.searchpage_products {
+    
+    display: grid;
+    grid-template-columns: repeat(5, 200px);
+    column-gap: 40px;
+    row-gap: 35px;
+}
+
+.searchpage_top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.select {
+    width: 100px;
+    height: 40px;
+    background-color: red;
+}

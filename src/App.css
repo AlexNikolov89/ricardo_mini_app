@@ -1,0 +1,12 @@
+.main_container {
+  background-color: #F2F2F2;
+  height: 100vh;
+  padding: 40px 90px;
+}
+
+img {
+  width: 160px;
+  margin-bottom: 40px;
+  display: flex;
+ 
+}
