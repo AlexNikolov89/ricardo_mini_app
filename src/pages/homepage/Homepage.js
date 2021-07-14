@@ -5,7 +5,6 @@ import { useHistory } from 'react-router'
 import TextField from '@material-ui/core/TextField';
 import {baseUrl} from '../../baseUrl'
 
-const token='6c112f4ce164f6c0825ffeb5a9842185ae4f207f'
 
 const Homepage = () => {
     const apiToken = process.env.REACT_APP_API_TOKEN
@@ -41,7 +40,6 @@ const Homepage = () => {
         onChange={(e) => setSearchText(e.target.value)}
         className='input_text'
       />
-            {/*<input type="text" value={searchText} onChange={(e) => setSearchText(e.target.value)} className='input_text' />*/}
         {searchText ? <button onClick={handleSubmit} className='btn'><i className="fas fa-search"></i>SEARCH</button> : <button className='btn disabled'><i className="fas fa-search"></i>SEARCH</button>}
         </div>
     )

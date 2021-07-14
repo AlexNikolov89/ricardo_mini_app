@@ -12,28 +12,27 @@ const ArticleDetailpage = ({match}) => {
     const [article, setArticle] = useState({})
     const [user, setUser] = useState({})
     const [loading, setLoading] = useState(false)
-    const [showMore, setShowMore] = useState(false); 
    
 
     useEffect(() => {
         const articleDetails = async () => {
             const res = await axios(`${baseUrl}/article-details?apiToken=${apiToken}&articleId=${articleId}`)
-            console.log(res.data)
+            //console.log(res.data)
             setArticle(res.data)
             setLoading(loading =>!loading)
         }
         articleDetails()
-    }, [articleId])
+    }, [articleId, apiToken])
 
     useEffect(() => {
         const fetchUserId = async () => {
-            const res = await axios(`${baseUrl}/user?apiToken=6c112f4ce164f6c0825ffeb5a9842185ae4f207f&userId=${article.sellerId}`)
-            console.log(res.data)
+            const res = await axios(`${baseUrl}/user?apiToken=${apiToken}&userId=${article.sellerId}`)
+            //console.log(res.data)
             setUser(res.data)
             setLoading(loading => !loading)
         }
         fetchUserId()
-    }, [article.sellerId])
+    }, [article.sellerId, apiToken])
 
 
     return (

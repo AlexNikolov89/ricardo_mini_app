@@ -1,0 +1,18 @@
+.notfound_container {
+    width: 100vw;
+}
+
+.image_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.image_wrapper > img {
+    width: 20%;
+    padding: 0 25%;
+}
+
+.image_wrapper > h3 {
+    padding: 0 20%;
+}
