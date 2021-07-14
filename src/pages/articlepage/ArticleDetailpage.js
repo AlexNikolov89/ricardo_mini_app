@@ -45,12 +45,16 @@ const ArticleDetailpage = ({match}) => {
 
                 <div className="right_container">
                     <h1>{article.title}</h1>
+
                     <div style={{ borderTop: "1px solid lightgrey ", marginLeft: 30, marginRight: 30, marginBottom: 30 }}></div>
-                    <div><span className='span'>Seller:</span> {user.name}</div>
+
+                    {user.name && <div><span className='span'>Seller:</span> {user.name}</div>}
                     {article.price ? (<div><span className='span'>Price:</span> {article.price} CHF</div>) : (<div><span className='span'>Price:</span> 0 CHF</div>)}
+
                     <div style={{ borderTop: "1px solid lightgrey ", marginLeft: 30, marginRight: 30, marginTop: 30 }}></div>
-                    <div style={{ marginTop: 30 }}>{article.subtitle}</div>
-                    <div dangerouslySetInnerHTML={{ __html: article.descriptionHtml }} />
+
+                    {article.subtitle && <div style={{ marginTop: 30 }}>{article.subtitle}</div>}
+                    {article.descriptionHtml && <div dangerouslySetInnerHTML={{ __html: article.descriptionHtml }} />}
                 </div>
             </div>
         </Fragment>
