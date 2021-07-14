@@ -15,7 +15,7 @@ const Homepage = () => {
     const handleSubmit = () => {  
         const searchTextValue = async () => {
             const res = await axios.get(`${baseUrl}/search?apiToken=${apiToken}&searchText=${searchText}`)
-            //setArticles(res.data)
+
             if(searchText.trim().toLocaleLowerCase()) {
                 history.push({
                     pathname: `/searchpage/${searchText}`,
